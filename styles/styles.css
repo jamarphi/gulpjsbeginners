@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #c2c2c2;
+}
+
+#header-title{
+    width: 100%;
+    text-align: center;
+}
+
+.app-header{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    background: #525252;
+    border-bottom: #000 1px solid;
+    animation-name: header-show;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-show{
+    0%{
+        top: -20vh;
+    }
+
+    50%{
+        top: -10vh;
+    }
+
+    80%{
+        top: 20vh;
+        background: red;
+    }
+
+    100%{
+        top: 0;
+        background: blue;
+    }
+}
+
+.table{
+    padding: 10px;
+    width: 15vh;
+    display: block;
+    margin: 3vh auto;
+    background-color: seagreen;
+    border: seagreen 1px solid;
+    border-radius: 5px;
+}
+
+.table-header{
+    background-color: green;
+    border-bottom: #000 3px solid;
+}
+
+.table-element{
+    background-color: springgreen;
+}
+
+.unordered-list{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 3vh auto;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.ordered-list{
+    list-style: none;
+    width: 30%;
+    display: block;
+    margin: 3vh auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.list-item{
+    background-color: red;
+    border: red 1px solid;
+    color: white;
+    border: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.select-container{
+    width: 30%;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    margin: 3vh auto;
+    border: #000 3px solid;
+    border-radius: 10px;
+}
+
+.sports-label{
+    margin-top: 1vh;
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    background-color: teal;
+}
+
+.select{
+    margin-top: 5px;
+    border: #c2c2c2 1px solid;
+    border-radius: 5px;
+}
+
+.image{
+    opacity: 0;
+    margin: 5vh auto;
+    display: block;
+    width: 30vh;
+    height: 30vh;
+    border: #000 3px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    animation-name: image-show;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image-show{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.pdf-file{
+    display: block;
+    margin: 3vh auto;
+    width: 60%;
+    height: 600px;
+}
+
+.btn{
+    display: block;
+    width: 20%;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border: red 1px solid;
+    margin: 10vh auto;
+    transition-property: color;
+    transition-duration: 2s;
+}
+
+.btn:active{
+    color: black
+}
+
+@media (max-width: 700px){
+    .table{
+        display: none;
+    }
+}
+
+@media (max-width: 580px){
+    .select{
+        visibility: hidden;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .pdf-file{
+        display: none;
+    }
+
+    .btn{
+        background-color: gold;
+    }
+}
